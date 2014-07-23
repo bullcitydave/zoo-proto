@@ -2,6 +2,11 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+$primary-font: Helvetica, Arial, sans-serif;
+$secondary-font: Helvetica, Arial, sans-serif;
+$max-width: 960px;
+
+
 // Custom Styles
 body {
   background: #fafafa;
@@ -9,18 +14,59 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.ginormo-box {
+  @include fill-parent;
+
+}
+
+.container {
+  @include outer-container;
+
+  .highlighted-content {
+    @include span-columns(12);
+  }
+
+  .main-content-blocks {
+    @include span-columns(12);
+
+    .content-block {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+  }
+
+  .secondary-content {
+    @include span-columns(12);
+
+    .secondary-menu {
+      @include span-columns(5 of 12);
+    }
+    .tertiary-menu {
+      @include span-columns(4 of 12);
+      @include shift(3);
+
+      .links {
+        @include span-columns(2 of 4);
+        @include omega(2n);
+      }
+    }
+  }
+}
+
+footer.main-footer {
+  width: 100%;
+  margin: auto;
+
+  .main-footer-content {
+    @include span-columns(12);
+
+    .footer-details {
+      @include span-columns(6);
+    }
+
+    .social-bar {
+      @include span-columns(4 of 12);
+      @include shift(2);
+    }
   }
 }
