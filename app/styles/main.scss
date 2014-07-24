@@ -26,10 +26,6 @@ body {
   // color: #333;
 }
 
-.ginormo-box {
-  @include fill-parent;
-
-}
 
 .container {
   @include outer-container;
@@ -61,6 +57,18 @@ body {
     .content-block {
       @include span-columns(6 of 12);
       @include omega(2n);
+
+      position:relative;
+      h2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+
+        span.featured {
+          color: $color2;
+        }
+      }
     }
   }
 
@@ -96,6 +104,34 @@ footer.main-footer {
     .social-bar {
       @include span-columns(4 of 12);
       @include shift(2);
+      ul.footer-social {
+        margin-top: 1em;
+
+        @include media($large-screen) {
+          float: right;
+          margin-top: 0;
+        }
+
+        li {
+          float: left;
+          font-size: 1em;
+          padding-right: .7em;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        img {
+          opacity: .7;
+          height: 1.6em;
+          padding: 1px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
@@ -179,26 +215,6 @@ footer.main-footer {
   }
 }
 
-// Uncomment this for a sticky footer.
-//
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
-
-// html, body {
-//  height: 100%;
-// }
-
-// .footer-2, .push {
-//   height: 17em;
-
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
 
 .footer-2 {
   $footer-background: desaturate(darken($base-accent-color, 20), 30);
@@ -261,33 +277,6 @@ footer.main-footer {
       font-weight: 400;
     }
 
-    ul.footer-social {
-      margin-top: 1em;
 
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-      }
-
-      li {
-        float: left;
-        font-size: 1em;
-        padding-right: .7em;
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      img {
-        opacity: .7;
-        height: 1.6em;
-        padding: 1px;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
   }
 }
