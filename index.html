@@ -15,16 +15,20 @@
   </head>
   <body>
 
-    <header class="ginormo-box">
-      <h1>North Carolina Zoo</h1>
+    <header class="hero">
 
-      <div id="search">{?}</div>
+      <div class="hero-inner">
+        <h1>North Carolina Zoo</h1>
+        <input id="search" placeholder="Search" type="text">
+  	  </div>
     </header>
 
     <section class="container">
 
-      <section class="highlighted-content">Highlighted content
-      </div>
+      <section class="highlighted-content">
+        <h2><span>Featured Exhibit: </span>Parrots of the Caribbean</h2>
+        <img class="highlighted-img" src="images/parrots.jpg">
+      </section>
 
       <section class="main-content-blocks">
         <div class="content-block">Content 1
@@ -57,7 +61,7 @@
       <section class="main-footer-content">
 
         <div class="footer-details">
-          <p>North Carolina Zoo | 100 Zoo Rd | Asheboro, NC | 888-888-8888</p>
+          <p>© & ™ 1998 - 2014        ·      North Carolina Zoo       ·      4401 Zoo Parkway       ·       Asheboro, North Carolina 27205       ·       1.800.488.0444</p>
         </div>
 
         <div id="social-bar">
@@ -65,6 +69,41 @@
         </div>
 
     </section>
+    <!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+  <div class="push"></div>
+</div>-->
+
+<footer class="footer-2">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+
+      <ul class="footer-social  ">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="">
+        </a></li>
+      </ul>
+    </div>
+</footer>
+
     </footer>
 
     <script src="scripts/vendor.js"></script>
